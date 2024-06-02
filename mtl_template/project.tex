@@ -20,13 +20,15 @@
 \usepackage{amsmath}
 \usepackage{txfonts}
 \usepackage{xcolor}
+\usepackage{tikz}
 
-
+% Setting colour scheme
 \setbeamercolor{section in head/foot}{fg=black, bg=footerColour}
 \setbeamercolor{frametitle}{fg=black,bg=white}
 \setbeamercolor{title}{fg=black,bg=white}
 
 
+% Footer for each slide having the copyright thing
 \makeatletter
 \setbeamertemplate{footline}
 {
@@ -42,48 +44,37 @@
 
 %\setbeamertemplate{navigation symbols}{}
 
-\titlegraphic{
-}
+%\titlegraphic{}
 
-%\newcommand{\source}[1]{\caption*{\tiny{#1}}}
-
-% slide at the beginning of each section - you can delete it, to get rid of this
-% source:
-%https://tex.stackexchange.com/questions/178800/creating-sections-each-with-title-pages-in-beamers-slides
-%\AtBeginSection[]{
-%	\begin{frame}
-%		\vfill
-%		\centering
-%		\begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
-%			\usebeamerfont{title}\insertsectionhead\par%
-%		\end{beamercolorbox}
-%		\vfill
-%	\end{frame}
-%}
-
-\title[Title]{\includegraphics[width=0.15\linewidth]{imgs/logo/mtl.png}\hspace*{2.5cm}~%
+% The cover page of the presentation
+\title[Title]{
+	\includegraphics[width=0.15\linewidth]{imgs/logo/mtl.png}\hspace*{2.5cm}~%
 	\includegraphics[width=0.15\linewidth]{imgs/logo/goe.png}\hspace*{2.cm}~%
 	\includegraphics[height = 0.14\linewidth, width=0.27\linewidth]{imgs/logo/hei.png} \\ \vspace{1cm} Presentation's title}
 \author[Author]{AUTHOR \inst{1} \inst{2}}
 \institute[Institute]{\inst{1} INST 1 \and \inst{2} INST 2}
-
 \date[DATE]{DATE}
+\addtobeamertemplate{frametitle}{\vspace*{0.23cm}}{\vspace*{0.2cm}}
+
+
+% New command to show the logo on each slide
+\newcommand{\frameTitle} [1]{\vspace{-2cm}\frametitle{\raisebox{\dimexpr .6ex-.5\totalheight}{\vspace*{-1cm}\includegraphics[height = 1cm, width=1cm]{imgs/logo/mtl.png}} \; \; #1}}
+
+
 
 \begin{document}
-	
-	
-	\begin{frame}%[plain]
-		\maketitle	\end{frame}
-	
+	\frame[plain]{\titlepage}
 	
 	\begin{frame}
-		\frametitle{Outline}
+		\frameTitle{Frame 1}
 		\tableofcontents
 	\end{frame}
+
 	\begin{frame}
-		\frametitle{Test Frame}
+		\frameTitle{Frame 2}
+		\section{section 1}
+		section 1 content ...
 	\end{frame}
-	
 		
 \end{document}
 
