@@ -1,0 +1,89 @@
+\documentclass{beamer}
+
+%\usetheme{Boadilla}
+% choose theme (and themecolor)
+%\usetheme{CambridgeUS}
+%\usetheme{Madrid}
+%\usetheme{Warsaw}
+%\usecolortheme{beaver}
+
+%packages
+\usepackage[utf8]{inputenc}
+\usepackage{color}
+\definecolor{mycolor}{rgb}{0.8,0.0,0.0}
+\definecolor{footerColour}{HTML}{00F3FF}
+\usepackage{subfigure}
+\usepackage[percent]{overpic}
+\usepackage{caption}
+\usepackage[export]{adjustbox}
+\usepackage{pdfpages}
+\usepackage{amsmath}
+\usepackage{txfonts}
+\usepackage{xcolor}
+
+
+\setbeamercolor{section in head/foot}{fg=black, bg=footerColour}
+\setbeamercolor{frametitle}{fg=black,bg=white}
+\setbeamercolor{title}{fg=black,bg=white}
+
+
+\makeatletter
+\setbeamertemplate{footline}
+{
+	\leavevmode%
+	\hbox{%
+		\begin{beamercolorbox}[wd=\paperwidth,ht=2.25ex,dp=1.5ex,right]{section in head/foot}%
+			\hfill \hfill\fontsize{4.5}{10}\selectfont \textcopyright\; 2024,  MAX PLANCK SCHOOLS \hspace{0.5cm}
+		\end{beamercolorbox}%
+		}%
+	\vskip0pt%
+}
+\makeatother
+
+%\setbeamertemplate{navigation symbols}{}
+
+\titlegraphic{
+}
+
+%\newcommand{\source}[1]{\caption*{\tiny{#1}}}
+
+% slide at the beginning of each section - you can delete it, to get rid of this
+% source:
+%https://tex.stackexchange.com/questions/178800/creating-sections-each-with-title-pages-in-beamers-slides
+%\AtBeginSection[]{
+%	\begin{frame}
+%		\vfill
+%		\centering
+%		\begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+%			\usebeamerfont{title}\insertsectionhead\par%
+%		\end{beamercolorbox}
+%		\vfill
+%	\end{frame}
+%}
+
+\title[Title]{\includegraphics[width=0.15\linewidth]{imgs/logo/mtl.png}\hspace*{2.5cm}~%
+	\includegraphics[width=0.15\linewidth]{imgs/logo/goe.png}\hspace*{2.cm}~%
+	\includegraphics[height = 0.14\linewidth, width=0.27\linewidth]{imgs/logo/hei.png} \\ \vspace{1cm} Presentation's title}
+\author[Author]{AUTHOR \inst{1} \inst{2}}
+\institute[Institute]{\inst{1} INST 1 \and \inst{2} INST 2}
+
+\date[DATE]{DATE}
+
+\begin{document}
+	
+	
+	\begin{frame}%[plain]
+		\maketitle	\end{frame}
+	
+	
+	\begin{frame}
+		\frametitle{Outline}
+		\tableofcontents
+	\end{frame}
+	\begin{frame}
+		\frametitle{Test Frame}
+	\end{frame}
+	
+		
+\end{document}
+
